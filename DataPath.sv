@@ -6,9 +6,12 @@ module DataPath(clk, addr_x, wr_en_x, addr_a, wr_en_a, addr_y, wr_en_y, clear_ac
   input signed [7: 0] data_in;
   output logic signed [15: 0] data_out;
   
+  //wire signed [7: 0] a, b;
+  //wire signed [15: 0] f;
+  
+  // for testing
   inout signed [7: 0] a, b;
   inout signed [15: 0] f;
-  //wire signed [15:0] data_out1;
   
   Memory #(8, 9, 4) memX(
   .clk(clk), 
@@ -39,9 +42,6 @@ module DataPath(clk, addr_x, wr_en_x, addr_a, wr_en_a, addr_y, wr_en_y, clear_ac
   .reset(clear_acc),
   .a(a),
   .b(b),
-  /*.a(data_in),
-  .b(data_in),
-  .f(data_out)*/
   .f(f)
   );
   

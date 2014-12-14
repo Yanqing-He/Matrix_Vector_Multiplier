@@ -6,7 +6,7 @@ module MULACC(clk, reset, a, b, f);
   logic signed [15: 0] fr;
   logic signed [7: 0] ar, br;
   
-  always @(posedge clk or posedge reset)
+  always_ff @(posedge clk, posedge reset)
   begin
     if(reset == 1)
     begin

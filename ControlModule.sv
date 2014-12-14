@@ -9,7 +9,7 @@ module ControlModule(clk, start, reset, addr_x, wr_en_x, addr_a, wr_en_a, addr_y
   logic [15:0] state, next_state;
   //logic started = 0;
   
-  always @(posedge clk)
+  always_ff @(posedge clk)
   begin
     if(reset == 1)
       state <= 0;
@@ -178,12 +178,6 @@ module ControlModule(clk, start, reset, addr_x, wr_en_x, addr_a, wr_en_a, addr_y
         done = 1;
 
         addr_y = state - 37;
-
-      end
-
-    else
-
-      begin
 
       end
   end

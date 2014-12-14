@@ -15,7 +15,7 @@ module mem_tb();
     
     initial
     begin
-      clk = 0;
+      clk = 1;
       wr_en = 0;
       data_in = 8'b00000000;
       addr = 2'b00;

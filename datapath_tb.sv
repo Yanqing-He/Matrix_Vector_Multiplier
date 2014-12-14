@@ -67,9 +67,12 @@ module datapath_tb();
   initial
   begin
     #1 wr_en_x = 1;
-    #19 wr_en_x = 0;
-    #0 wr_en_a = 1;
-    #6 wr_en_a = 0;
+    #20 wr_en_x = 0;
+  end
+  initial
+  begin
+    #19 wr_en_a = 1;
+    #8 wr_en_a = 0;
   end
   initial
   begin
@@ -102,8 +105,8 @@ module datapath_tb();
   initial
   begin
     #26 clear_acc = 1;
-    #4 clear_acc = 0;
-    #10 wr_en_y = 1;
+    #5 clear_acc = 0;
+    #9 wr_en_y = 1;
     #2 wr_en_y = 0;
     #0 clear_acc = 1;
     #2 clear_acc = 0;
